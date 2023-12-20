@@ -1,0 +1,22 @@
+<div class="container py-5 has-text-centered">
+  <form [formGroup]="equation">
+      <div class="is-flex is-align-items-center is-justify-content-center">
+        <div class="is-flex">
+          <p class="">{{ equation.value.value1 }}</p>
+          <p class="ml-2"> + </p>
+          <p class="ml-2">{{ equation.value.value2 }}</p>
+          <p class="ml-2"> = </p>
+        </div>
+        <input
+          formControlName="answer"
+          class="input ml-3"
+          type="text"
+          style="width: 20%;"
+        >
+      </div>
+  </form>
+  <div class="p-5 stats has-text-centered">
+    <span class="has-text-weight-bold is-size-1">{{ secondsPerSolution | number: '1.0-2' }}</span>
+    <h2> seconds per solution.</h2>
+  </div>
+</div>
